@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>danielle's garden</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=refresh" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+  <body>
+    <script src="index.js"></script>
+    <div class = "header">
+        <button class = "headerButtons" id = "aboutButton" onclick = "changePage('about'), buttonPressed('aboutButton')" style = "background: rgb(39, 125, 161)">about</button>
+        <button class = "headerButtons" id = "researchButton" onclick = "changePage('research'), buttonPressed('researchButton')" style = "background: rgba(87, 117, 144)">research</button>
+        <button class = "headerButtons" id = "cvButton" onclick = "changePage('cv'), buttonPressed('cvButton')" style = "background: rgba(77, 144, 142)">cv</button>
+        <button class = "headerButtons" id = "faqButton" onclick = "changePage('faq'), buttonPressed('faqButton')"  style = "background: rgba(67, 170, 139)">faq</button>
+        <button class = "headerButtons" id = "miscButton" onclick = "changePage('misc'), buttonPressed('miscButton')" style = "background: rgba(144, 190, 109)">misc</button>
+        <button class = "headerButtons" id = "contactButton" onclick = "changePage('contact'), buttonPressed('contactButton')" style = "background: rgb(151, 171, 136)">contact</button>
+    </div>
+    <div class="waveBox">
+
+        <!--Waves Container-->
+        <div>
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(28, 114, 147,1" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(28, 114, 147,0.5)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(28, 114, 147,0.3)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(28, 114, 147,0.3)" />
+        </g>
+        </svg>
+        </div>
+        <!--Waves end-->
+        <div class = "solidColour"></div>
+    </div>
+
+    <div class = "box" id = "about">
+        <div class = "boxColour"></div>
+        <div class = "boxText">
+            <div class = "boxTextItem" id = "headerIntroAbout">
+                <div style= "display:flex;margin-bottom:-15px">
+                    <img class = "boxImage" src = "avatar.webp">
+                    <div style = "margin-left:15px;margin-bottom:0px">
+                        <p class = "boxHeader" id = "hello">hi!</p>
+                        <p class = "boxTextBody">I'm Danielle Dacanay. </p>
+                        <p class = "boxTextBody">I'm a computational linguist (MSc, BA (Hons.)), specialising in language documentation and revitalisation. </p>
+                    </div>
+                </div>
+
+                <p class = "boxTextBody">Most of my work centres on documenting and creating digital resources for Indigenous languages in northern Canada. </p>
+                <p class = "boxTextBody"></p>
+                <p class = "boxTextBody">You can scroll or click on the buttons on the side of this box to learn more about me. You can also click on the boxes on the top right of the screen to see my research, curriculum vitae, frequently asked questions, and more. </p>
+                <p class = "boxTextBody">I hope you enjoy your time here in my digital garden, and always remember: </p>
+                <div class="quoteBox">Random Quote Generator
+                    <p class = "boxTextBody" id = "quoteBox">[INSERT QUOTE]</p>
+                    <span class="material-symbols-outlined" id = "refreshIcon" onclick = "getRandomQuote()">
+                        refresh
+                        </span>
+                </div>
+                <div  class = "boxTextItem" style = "display:block;position:relative" id = "whoAmI">
+                    <div style = "display:flex;flex-direction:row">
+                        <img class = "boxImage" id = "irlPhotos" src = "avatar.webp" style = "position:absolute;right:0;top:10%">
+                        <p  style = "position:absolute;right:0;top:75%;right:6%"> <span onclick = "changePhoto('left')">left</span> me in real life :3 <span onclick = "changePhoto('right')">right</span></p>
+                    </div>                    
+                    <p class = "boxHeader">who am i?</p>
+                    <p class = "boxTextBody" style="width:60%">On a professional level, I'm a </p>
+                    <p class = "boxTextBody" style="width:60%">I'm a computational linguist (MSc), specialising in language documentation and revitalisation. Most of my work centres on documenting and creating digital resources for Indigenous languages in northern Canada.</p>
+                    <p class = "boxTextBody"></p>
+                    <p class = "boxTextBody" style="width:60%">You can click on the buttons on the side of this box to learn more about me. You can also click on the boxes on the top right of the screen to see my research, projects, curriculum vitae, and more. </p>
+                    <p class = "boxTextBody">I hope you enjoy your time here in my digital garden, and always remember: </p>
+                </div>
+
+                <div style= "display:flex;margin-bottom:-15px">
+                    <div style = "margin-left:15px;margin-bottom:0px">
+                        <p class = "boxHeader" id = "whatAmI">what am i?</p>
+                        <p class = "boxTextBody">I'm Danielle Dacanay. </p>
+                        <p class = "boxTextBody">I'm a computational linguist! My job focuses on </p>
+                    </div>
+                </div>
+                <div  class = "boxTextItem" style = "display:block" id = "whyAmI">
+                    <p class = "boxHeader">I think</p>
+                    <p class = "boxTextBody"></p>
+                    <p class = "boxTextBody"></p>
+
+                </div>
+                <div  class = "boxTextItem" style = "display:block" id = "whereAmI">
+                    <p class = "boxHeader">where am i?</p>
+                    <p class = "boxTextBody">I travel very frequently, but you can usually find me in either Behchokǫ̀, Northwest Territories, or Edmonton, Alberta.  </p>
+                    <p class = "boxHeader"></p>
+                    <p class = "boxTextBody">The best way to reach me is usually by email. Check out my Contact page for more information on how to get in touch.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class = sideButtons>
+            <button class = "boxNavButtons" onclick = "document.getElementById('headerIntroAbout').scrollIntoView({behavior: 'smooth', block:'start'})" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">who am i?</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('whatAmI').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(77, 144, 142)">what am i?</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('whyAmI').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(67, 170, 139)">why am i?</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('whereAmI').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">where am i?</button>
+        </div>
+    </div>
+    <div class = "footerText">© danielle dacanay 2025 <3</div>
+    <div class = "box" id = "research" style = "display:none;border:4px solid rgba(87, 117, 144);    border-top: 16px solid rgba(87, 117, 144)">
+        <div class = "boxText">
+            <div class = "boxTextItem" id = "headerIntroResearch">
+                <p class = "boxHeader">research</p>
+                <p class = "boxTextBody">This is the section about my research</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "majorProjects">
+                <p class = "boxHeader">Tłı̨chǫ Online Dictionary</p>
+                <p class = "boxTextBody">As its name suggests, the Tłı̨chǫ Online Dictionary is an intelligent online dictionary of Tłı̨chǫ, containing over 11500 entries from dozens of sources, spanning from the late 1960s to 2025. It is searchable in English and Tłı̨chǫ, and is able to recognise Tłı̨chǫ search queries even if their spelling differs from that of the standard orthography. The dictionary also features the ability to search for entries by semantic domains, using a semantic classification system based on the SIL Rapid Word Collection Methodology. Inflectional paradigms are automatically generated for verbs, nouns, and adpositions . The dictionary also contains over 3000 audio recordings, over 4000 example sentences, and supports the ability to add cultural notes to individual entries to clarify usage. The site also allows users to submit their own entries for consideration, as well as to suggest alterations to existing entries.</p>
+                <p class = "boxTextBody">I created the Tłı̨chǫ Online Dictionary largely as an upgrade to an existing Tłı̨chǫ dictionary site created by the University of Victoria in 2004. Through collaboration with the Tłı̨chǫ Government’s Department of Culture and Lands Protection, I have led the creation of the online dictionary both from a linguistic perspective (that is, eliciting new entries, creating paradigms, and consulting with L1 speakers, among other things) and from the perspective of web development (that is, creating and managing the site and user interface). A full list of collaborators may be found here.
+                <p class = "boxTextBody">The Tłı̨chǫ Online Dictionary itself may be found here.</p>
+                <p class = "boxHeader">itwêwina</p>
+                <p class = "boxTextBody">itwêwina is an intelligent online dictionary of Plains Cree developed by the Alberta Language Technology Lab (ALTLab), searchable both in Plains Cree and English. Its contains the combined contents of three separate, pre-existing Plains Cree dictionaries with a morphological model which is able to automatically generate conjugated forms for each noun and verb entry, as well as recognise any conjugated forms as search queries. In addition to this, itwêwina‘s search functionality is able to return semantically related terms for any search query, even if the search query is not an entry in the dictionary, and can even translate certain short English sentences into conjugated Cree words. Furthermore, audio recordings of pronunciations from multiple native speakers are available for thousands of itwêwina‘s entries, and it is possible to enable a Cree text-to-speech model to generate theoretical pronunciations for any entries which lack native speaker recordings. Finally, itwêwina‘s search functionality is able to recognise systemic variations in the spelling of Cree words, as well as Cree syllabics, allowing users to effectively search for words even if they are unsure of their exact spelling.</p>
+                <p class = "boxTextBody">Although initially created for Plains Cree, the basic framework for itwêwina has been designed to be easily adaptable for use in other languages, and versions of itwêwina have been created for Woods Cree (nīhithawīwin), Sarcee (Tsúùtʼínà), Northern Haida (X̱aat Kíl), and Arapaho (Hinóno’éitíit)</p>
+                <p class = "boxTextBody">My primary contributions to itwêwina include manually annotating large quantities of Plains Cree audio to extract vocabulary recordings and link them to their respective entries, performing preliminary research and heuristic tests for the semantic search system, adding and standardising the contents of two of itwêwina‘s three constituent dictionaries, and collecting and processing natural language data for the search spellchecker.</p>
+                <p class = "boxTextBody">itwêwina may be found here.</p>
+                <p class = "boxHeader">Maskwacîs Speech Database</p>
+                <p class = "boxTextBody">The Maskwacîs Speech Database is a freely accessible online database of spoken Plains Cree words and sentences, developed by the Alberta Language Technology Lab and chiefly coded by Jolene Poulin. It contains 20 300 entries and over 150 000 individual recordings, the vast majority of which were elicited from native Cree speakers in Maskwacîs, Alberta over the course of a four year period from 2014 to 2018. In addition to these entries, Maskwacîs Speech Database also has a built-in audio recording system, allowing registered users to record their own pronunciations of words and sentences, which may be added to the main database once they are reviewed and approved by a linguist. Although the Speech Database was initially developed for the Maskwacîs dialect of Plains Cree, the Speech Database format has since been expanded to be used with multiple other languages, including other dialects of Plains Cree, Sarcee (Tsúùtʼínà), and Stoney-Nakoda (Îethka Îabi).</p>
+                <p class = "boxTextBody">My primary contributions to the Maskwacîs Speech Database have been annotating the source audio files to extract recordings of relevant words and phrases, standardising the Cree spelling and English definitions for each entry, providing morphological analyses for each entry, and reviewing each entry in the database with native speakers of Cree to ensure that the pronunciations and definitions are correct</p>
+                <p class = "boxTextBody">The Maskwacîs Speech Database may be found here.</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "two">
+
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "minorProjects">
+                <p class = "boxHeader">Plains Cree Supplemental Corpus</p>
+                <p class = "boxTextBody">The Plains Cree Supplemental Corpus is a digital corpus of miscellaneous written Plains Cree texts, chiefly Plains Cree translations of governmental and corporate documents, as well as a large number of stories, songs, and interviews from native speakers. Each of the 457 individual texts in the corpus has been segmented into sentences, with each Cree sentence manually paired with an English translation. The corpus has a total of size of ~349 000 tokens, with roughly half of these being Cree, and the other half being English translations. In terms of raw token count, this represents the largest searchable corpus of Plains Cree compiled to date. The materials used to create this corpus were taken from various, disparate sources across the internet (including the Cree Literacy Network), with the compilation of this corpus representing the first major centralisation of this ephemera into a single, searchable repository. The metadata for each individual source, which includes speaker age, region of origin, genre, and level of adherence to the Plains Cree Standard Roman Orthography, is catalogued in a spreadsheet alongside the main corpus materials.</p>
+                <p class = "boxTextBody">I have headed this project since its inception, and have been responsible for locating and cataloguing each of the texts in the corpus, pairing (or parallelising) each Cree sentence with its English equivalent, and for maintaining an organised central repository of the texts.</p>
+                <p class = "boxTextBody">I am currently in the process of making an accessible online repository; however, if you would like to access the corpus in the meantime, feel free to email me.</p>
+                <p class = "boxHeader">Translation of the Dictionnaire de la langue des Cris (1874)</p>
+                <p class = "boxTextBody">The Dictionnaire de la langue des Cris is French dictionary of Plains Cree written by Pr. Albert Lacombe in 1874, constituting the earliest, and to this day one of the largest, written dictionaries of the language. However, use of the dictionary among modern Plains Cree populations is relatively minimal, owing largely to the fact that it was written in French, a language which is contemporaneously spoken by only a small portion of the population of the Western Prairies. As such, I translated all 11 411 entries in the dictionary into English, transcribing each into a searchable digital text format. This translation of the dictionary was made available online as a companion dictionary to itwêwina, although it is eventually planned for the contents of the two to be merged. In addition to this translation, I am also in the process of standardising the Cree spelling and part-of-speech classification system used in the original dictionary to correspond to modern lexicographic standards; as of writing, I have standardised ~61% of the dictionary’s contents.</p>
+                <p class = "boxTextBody">The searchable, non-standardised English translation of the Dictionnaire de la langue des Cris may be found here. If you would like the (unfinished) standardised version, feel free to email me.</p>
+                <p class = "boxHeader">ʔayʔaǰuθəm Morphological Parser</p>
+                <p class = "boxTextBody">The Comox (ʔayʔaǰuθəm) Morphological Parser is a script which I have written to automatically provide inflectional and derivational analyses for morphologically complex words in ʔayʔaǰuθəm. The linguistic basis for the script largely stems from the descriptive works of Dr. Honoré Watanabe (particularly his 2003 morphological description), as well as my personal consultations with Dr. Marianne Huijsmans. Although still firmly in beta development, tests of the current model are able to provide morphological analyses for ~52% of tokens in previously unseen texts.</p>
+                <p class = "boxTextBody">The ʔayʔaǰuθəm parser is not yet publicly available, however, if you would like more information, feel free to email me.</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "publications">
+                <p class = "boxHeader">publications</p>
+                <p class = "boxTextBody">Dacanay, D., Harrigan, A., & Arppe, A. (2021). Computational analysis versus human intuition: a critical comparison of vector semantics with manual semantic classification in the context of Plains Cree. In Silfverberg, M., & Desjardins, J.  (eds.), Proceedings of the 4th Workshop on Computational Methods for Endangered Languages, 1, 33-43. doi:10.33011/computel.v1i.971</p>
+                <p class = "boxTextBody">Dacanay, D., Harrigan, A., Wolvengrey, A. & Arppe, A. (2021). The more detail, the better? – Investigating the effects of semantic ontology specificity on vector semantic classification with a Plains Cree / nêhiyawêwin dictionary. In Mager, M., Oncevay, A., Rios, A., Meza Ruiz, I.V., Palmer, A., Neubig, G., Kann, K.  (eds.), Proceedings of the 1st Workshop on NLP for Indigenous Languages of the Americas, 1, 143-52. doi:10.18653/v1/2021.americasnlp-1.15</p>
+                <p class = "boxTextBody">Dacanay, D., Poulin, J., & Arppe, A. (2022). kêtiski-kotahâskwâtam: The effectiveness of various hypernymic levels of WordNet synsets as vector semantic classification categories. In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Third Algonquian Conference (PAC53), 53.                 </p>
+                <p class = "boxTextBody">Dacanay, D. (2022). Lexical Semantic Classification in Plains Cree (nêhiyawêwin): Manual and Computational Approaches (Honours thesis, University of Alberta).</p>
+                <p class = "boxTextBody">Poulin, J., Dacanay, D., & Arppe, A. (2023). Speech Database (Speech-DB) – An on-line platform for recording, storing, validating, and searching spoken language data. In the Proceedings of 1st Workshop on NLP applications to Field Linguistics (Field Matters). </p>
+                <p class = "boxTextBody">Arppe, A., Neitsch, A., Dacanay, D., Poulin, J., Hieber, D., & Harrigan, A. (2023) Finding words that aren’t there: Using word embeddings to improve dictionary search for low-resource languages. In Proceedings of the 3rd Workshop on NLP for Indigenous Languages of the Americas.</p>
+                <p class = "boxTextBody">Arppe, A., Harrigan, A., Schmirler, K., Dacanay, D., Makinaw, R. (2023) nêhiyawi-pîkiskwêwin maskwacîsihk: Spoken Dictionary of Maskwacîs Cree. Dictionaries: Journal of the Dictionary Society of North America, 44(2), 127-42</p>
+                <p class = "boxTextBody">Dacanay, D. (2024). Woods Cree (nîhithawîwin): A Grammatical Description and Computational Modelling (Master's Thesis, University of Alberta). </p>
+                <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2025). Digitizing, translating, and standardizing Pr. Albert Lacombe’s Dictionnaire de la langue des Cris (1874). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Fourth Algonquian Conference (PAC54), 54.</p>
+                <p class = "boxTextBody">Dacanay, D., & Arppe, A. (2026, forthcoming). misi-mîkiwâhp pêsêkinosa ohci – A corpus of miscellaneous Plains Cree texts. In Papers of the Fifty-Fifth Algonquian Conference (PAC55), 55.</p>
+                <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2027, forthcoming). Adapting a Plains Cree (nêhiyawêwin) morphological model to Woods Cree (nîhithawîwin). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Sixth Algonquian Conference (PAC56), 56.</p>
+                <p class = "boxHeader"></p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "other">
+                <p class = "boxHeader">other</p>
+                <p class = "boxTextBody">laterrrrr</p>
+            </div>
+        </div>
+        <div class = sideButtons>
+            <button class = "boxNavButtons" onclick = "changeBox('majorProjects')" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">major projects</button>
+            <button class = "boxNavButtons" onclick = "changeBox('minorProjects')" style = "background: rgb(77, 144, 142)">minor projects</button>
+            <button class = "boxNavButtons" onclick = "changeBox('publications')" style = "background: rgb(67, 170, 139)">publications</button>
+            <button class = "boxNavButtons" onclick = "changeBox('other')" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">other</button>
+        </div>
+    </div>
+    <div class = "box" id = "cv" style = "display:none;border:4px solid rgba(77, 144, 142);border-top: 16px solid rgba(77, 144, 142)">
+        <div class = "boxText">
+            <div class = "boxTextItem" id = "headerIntroCV">
+                <p class = "boxHeader">curriculum vitae</p>
+                <p class = "boxTextBody">You can find a downloadable copy of my CV here, or you can browse below</p>
+                <p class = "boxHeader"> ---</p>
+                <p class = "boxHeader" id = "CVeducation">education</p>
+                <p class = "boxTextBody">University of Alberta (2022-2024)</p>
+                <p class = "boxTextBody">MSc in Linguistics</p>
+                <p class = "boxTextBody">Thesis Title: Woods Cree (nîhithawîwin): A Grammatical Description and Computational Modelling</p>
+                <p class = "boxTextBody">Thesis Supervisor: Dr. Antti Arppe</p>
+                <p class = "boxTextBody">University of Alberta (2018-2022)</p>
+                <p class = "boxTextBody">B.A. Honours in Linguistics, minoring in Anthropology.</p>
+                <p class = "boxTextBody">Thesis Title: Lexical Semantic Classification in Plains Cree (nêhiyawêwin): Manual and Computational Approaches</p>
+                <p class = "boxTextBody">Thesis Supervisor: Dr. Antti Arppe</p>
+                <p class = "boxHeader" id = "CVoccupation">select occupational experience</p>
+                <p class = "boxTextBody">Dictionary Keeper, Tłı̨chǫ Government (2024-)</p>
+                <p class = "boxTextBody">Headed the creation, expansion, and maintenance of an online dictionary of Tłı̨chǫ Yatıı̀, as well as various other language documentation projects.</p>
+                <p class = "boxTextBody">Graduate Research Assistant, Alberta Language Technology Lab (2022-2024)</p>
+                <p class = "boxTextBody">Headed lexicographic documentation projects and corpus development for Plains Cree, developed morphological models for several Indigenous languages, assisted in conference organisation, and produced academic publications representing the lab. </p>
+                <p class = "boxTextBody">Undergraduate Research Assistant, Alberta Language Technology Lab (2019-2022)</p>
+                <p class = "boxTextBody">Performed various linguistic data-related tasks, including semantic classification, translation, interlinearisation, audio annotation, and vocabulary elicitation</p>
+                <p class = "boxTextBody">Tutor-Mentor, Tutorbright (2019-2023)</p>
+                <p class = "boxTextBody">Taught both English and French as second languages to students of various ages, typically on an individual level</p>
+                <p class = "boxHeader" id = "CVpublications">publications</p>
+                <p class = "boxTextBody">Dacanay, D., Harrigan, A., & Arppe, A. (2021). Computational analysis versus human intuition: a critical comparison of vector semantics with manual semantic classification in the context of Plains Cree. In Silfverberg, M., & Desjardins, J.  (eds.), Proceedings of the 4th Workshop on Computational Methods for Endangered Languages, 1, 33-43. doi:10.33011/computel.v1i.971</p>
+                <p class = "boxTextBody">Dacanay, D., Harrigan, A., Wolvengrey, A. & Arppe, A. (2021). The more detail, the better? – Investigating the effects of semantic ontology specificity on vector semantic classification with a Plains Cree / nêhiyawêwin dictionary. In Mager, M., Oncevay, A., Rios, A., Meza Ruiz, I.V., Palmer, A., Neubig, G., Kann, K.  (eds.), Proceedings of the 1st Workshop on NLP for Indigenous Languages of the Americas, 1, 143-52. doi:10.18653/v1/2021.americasnlp-1.15</p>
+                <p class = "boxTextBody">Dacanay, D., Poulin, J., & Arppe, A. (2022). kêtiski-kotahâskwâtam: The effectiveness of various hypernymic levels of WordNet synsets as vector semantic classification categories. In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Third Algonquian Conference (PAC53), 53.                 </p>
+                <p class = "boxTextBody">Dacanay, D. (2022). Lexical Semantic Classification in Plains Cree (nêhiyawêwin): Manual and Computational Approaches (Honours thesis, University of Alberta).</p>
+                <p class = "boxTextBody">Poulin, J., Dacanay, D., & Arppe, A. (2023). Speech Database (Speech-DB) – An on-line platform for recording, storing, validating, and searching spoken language data. In the Proceedings of 1st Workshop on NLP applications to Field Linguistics (Field Matters). </p>
+                <p class = "boxTextBody">Arppe, A., Neitsch, A., Dacanay, D., Poulin, J., Hieber, D., & Harrigan, A. (2023) Finding words that aren’t there: Using word embeddings to improve dictionary search for low-resource languages. In Proceedings of the 3rd Workshop on NLP for Indigenous Languages of the Americas.</p>
+                <p class = "boxTextBody">Arppe, A., Harrigan, A., Schmirler, K., Dacanay, D., Makinaw, R. (2023) nêhiyawi-pîkiskwêwin maskwacîsihk: Spoken Dictionary of Maskwacîs Cree. Dictionaries: Journal of the Dictionary Society of North America, 44(2), 127-42</p>
+                <p class = "boxTextBody">Dacanay, D. (2024). Woods Cree (nîhithawîwin): A Grammatical Description and Computational Modelling (Master's Thesis, University of Alberta). </p>
+                <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2025). Digitizing, translating, and standardizing Pr. Albert Lacombe’s Dictionnaire de la langue des Cris (1874). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Fourth Algonquian Conference (PAC54), 54.</p>
+                <p class = "boxTextBody">Dacanay, D., & Arppe, A. (2026, forthcoming). misi-mîkiwâhp pêsêkinosa ohci – A corpus of miscellaneous Plains Cree texts. In Papers of the Fifty-Fifth Algonquian Conference (PAC55), 55.</p>
+                <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2027, forthcoming). Adapting a Plains Cree (nêhiyawêwin) morphological model to Woods Cree (nîhithawîwin). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Sixth Algonquian Conference (PAC56), 56.</p>
+                
+                <p class = "boxHeader" id = "CVother">awards</p>
+                <p class = "boxTextBody">International Baccalaureate Diploma Scholarship (2018)</p>
+                <p class = "boxTextBody">$1000CAD</p>
+                <p class = "boxTextBody">Roger S. Smith Undergraduate Researcher Award (2020)</p>
+                <p class = "boxTextBody">$5000CAD</p>
+                <p class = "boxTextBody">Undergraduate Researcher Initiative Stipend (2021)</p>
+                <p class = "boxTextBody">$6000CAD</p>
+                <p class = "boxHeader">workshops</p>
+                <p class = "boxTextBody" style = "text-decoration:underline">Volunteer</p>
+                <p class = "boxTextBody">Tłı̨chǫ Interpreter Translator Certification Program, Behchokǫ̀, Northwest Territories, June 4-6 2025</p>
+                <p class = "boxTextBody">Instructor</p>
+                <p class = "boxTextBody">Alberta Conference on Linguistics 2023, University of Lethbridge, Lethbridge, Alberta, November 25 2023</p>
+                <p class = "boxTextBody" style = "text-decoration:underline">Presenter</p>
+                <p class = "boxTextBody">Fifty-Fifth Algonquian Conference, University of Alberta, Edmonton, Alberta, October 19-22 2023</p>
+                <p class = "boxTextBody">Organiser</p>
+                <p class = "boxTextBody">Canadian Indigenous Languages and Literacy Development Institute Summer Program, University of Alberta, Edmonton, Alberta, July 10-28</p>
+                <p class = "boxTextBody">Volunteer Teaching Assistant (VeSPA)</p>
+                <p class = "boxTextBody">Alberta Conference on Linguistics 2022, University of Calgary, Calgary, Alberta, October 29 2022</p>
+                <p class = "boxTextBody">Presenter</p>
+                <p class = "boxTextBody">Attendee</p>
+                <p class = "boxTextBody">Spring Training in Experimental Psycholinguistics, Centre for Comparative Psycholinguistics, Edmonton, Alberta, June 12-17 2023</p>
+                <p class = "boxTextBody">The Minimal Course approach for teaching/learning Algonquian Languages, Carleton University, Online, October 17 2021</p>
+                <p class = "boxTextBody">First Workshop on Natural Language Processing for Indigenous Languages of the Americas, Association for Computational Linguistics, Online, June 11 2021</p>
+                <p class = "boxTextBody">Organization of Alberta Students in Speech (OASIS) Conference, University of Alberta, Edmonton, Alberta, September 28 2019</p>
+
+            </div>
+        </div>
+        <div class = sideButtons>
+            <button class = "boxNavButtons" onclick = "document.getElementById('CVeducation').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">education</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('CVoccupation').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(77, 144, 142)">occupations</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('CVpublications').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(67, 170, 139)">publications</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('CVother').scrollIntoView({behavior: 'smooth', block: 'start'})" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">other</button>
+        </div>
+    </div>
+    <div class = "box" id = "faq" style = "display:none;border:4px solid rgba(67, 170, 139);border-top: 16px solid rgba(67, 170, 139)">
+        <div class = "boxText" style = "width:100%">
+            <div class = "boxTextItem" id = "headerIntroFAQ">
+                <p class = "boxHeader">faq</p>
+                <button class = "faqButton" onclick = "showFAQ('faq1', 'faqArrow1')"><p class = "boxTextBody">What are your pronouns?</p><span class="material-icons" id = "faqArrow1" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers"  id = "faq1" style = "display:none">My preference she/her, but they/them is also fine!</p>
+                <button class = "faqButton" onclick = "showFAQ('faq2', 'faqArrow2')"><p class = "boxTextBody">Where are you from?</p><span class="material-icons" id = "faqArrow2" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq2" style = "display:none">Short answer, South Africa and/or Canada, depending on the context. For the long answer, ask me in person!</p>
+                <button class = "faqButton" onclick = "showFAQ('faq3', 'faqArrow3')"><p class = "boxTextBody">How many languages do you speak?</p><span class="material-icons" id = "faqArrow3" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq3" style = "display:none">Ehhhhh, it really depends how you count it. I can hold a conversation on most topics in English, Afrikaans, French, and German. I have a very in-depth understanding of the morphosyntax of Tłı̨chǫ yatıı̀ and Plains Cree, although I can only hold a fairly basic conversation in either; that said, my Tłı̨chǫ is generally much better (and more practiced) than my Cree, at least at the moment. For a brief period during a field-methods course in 2022, I was also able to speak Sango very well, perhaps as well as my French. However, I have not practiced much since then, and would struggle to hold a basic conversation now, unless given time to practice. <br><br>Sooo, maybe 5 or 6?</p>
+                <button class = "faqButton" onclick = "showFAQ('faq4', 'faqArrow4')"><p class = "boxTextBody">Why are some of your papers credited under a different name?</p><span class="material-icons" id = "faqArrow4" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq4" style = "display:none">I changed my forename in 2025 from Daniel to Danielle. Any of my papers credited under 'Daniel Dacanay' are still mine, just under an old name. Feel free to still cite them under the old name if you wish; alternatively, you can refer to me before 2025 as 'Danielle (<i>née</i> Daniel) Dacanay.'</p>
+                <button class = "faqButton" onclick = "showFAQ('faq5', 'faqArrow5')"><p class = "boxTextBody">Can I use your dictionary/grammar description in my work?</p><span class="material-icons" id = "faqArrow5" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq5" style = "display:none">Absolutely! Just be sure to properly cite me in your credits.</p>
+                <button class = "faqButton" onclick = "showFAQ('faq6', 'faqArrow6')"><p class = "boxTextBody">Can you help me put together a dictionary for my language?</p><span class="material-icons" id = "faqArrow6" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq6" style = "display:none">Sure! I'm always happy to have a look at some language data and see what can be done with it, as well as to help plan out language documentation projects of any kind. Send me an email, and we'll see what we can do.</p>
+                <button class = "faqButton" onclick = "showFAQ('faq7', 'faqArrow7')"><p class = "boxTextBody">What's your theoretical background?</p><span class="material-icons" id = "faqArrow7" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq7" style = "display:none">I generally try to steer clear of debates on linguistic theory, as I think they more often get in the way of meaningful documentation than actually help with anything. That said, I generally adhere to an Empiricist or Behaviorist framework when it comes to language processing and acquisition, rather than an Innatist view; I don't think that a capacity for language is innate in humans, and I view the human ability to use language as an emergent property of several other cognitive abilities, rather than a uniquely specialised, or 'domain-specific' one. When it comes to morphosyntax, I tend to align more closely with the Construction Grammar approach than with a Generativist one, and I typically to view frequency and collocation as more powerful factors than structural constraints. I don't really have a favourite theoretical framework for phonology.</p>
+                <button class = "faqButton" onclick = "showFAQ('faq8', 'faqArrow8')"><p class = "boxTextBody">Where did your old website go?</p><span class="material-icons" id = "faqArrow8" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq8" style = "display:none">My old site is still available at this link. I'm still quite proud of it, and have no intention of taking it down; the personal information there is just a bit out of date, and I felt like creating something new. Still, feel free to check it out, if you want a glimpse into my slightly earlier life.</p>
+                <button class = "faqButton" onclick = "showFAQ('faq9', 'faqArrow9')"><p class = "boxTextBody">Are you on social media?</p><span class="material-icons" id = "faqArrow9" style = "position:absolute;right:3%;top:30% ">keyboard_arrow_down</span></button>
+                <p class = "faqAnswers" id = "faq9" style = "display:none">Not really. The only social media platform which I use regularly is Discord, where you can add me at this link. If you want to follow my work, or my personal thoughts, this very website would be the best place to check.</p>
+            </div>
+        </div>
+
+    </div>
+    <div class = "box" id = "misc" style = "display:none;border:4px solid rgba(144, 190, 109);border-top: 16px solid rgba(144, 190, 109)">
+        <div class = "boxText">
+            <div class = "boxTextItem" id = "headerIntroMISC">
+                <p class = "boxHeader">misc</p>
+                <p class = "boxBodyText">misc</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "misc1">
+                <p class = "boxHeader"> misc (contd.)</p>
+                <p class = "boxBodyText">misc</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "misc2">
+                <p class = "boxHeader"> misc (contd.)</p>
+                <p class = "boxBodyText">misc</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "misc3">
+                <p class = "boxHeader"> misc (contd.)</p>
+                <p class = "boxBodyText">misc</p>
+            </div>
+            <div  class = "boxTextItem" style = "display:none" id = "misc4">
+                <p class = "boxHeader"> misc (contd.)</p>
+                <p class = "boxBodyText">misc</p>
+            </div>
+        </div>
+        <div class = sideButtons>
+            <button class = "boxNavButtons" onclick = "changeBox('whoAmI')" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">misc1</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whatAmI')" style = "background: rgb(77, 144, 142)">misc2</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whyAmI')" style = "background: rgb(67, 170, 139)">misc3</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whereAmI')" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">misc4</button>
+        </div>
+    </div>
+        </div>
+    <div class = "box" id = "contact" style = "display:none;border:4px solid rgba(151, 171, 136);border-top: 16px solid rgba(151, 171, 136)">
+        <div class = "boxText">
+            <div class = "boxTextItem" id = "headerIntroCONTACT">
+                <div style= "display:flex;margin-bottom:-15px">
+                    <div style = "margin-left:15px;margin-bottom:0px">
+                        <p class = "boxHeader">contact</p>
+                        <p class = "boxTextBody">The best way to contact me is by email. You can reach me at:</p>
+                        <p class = "boxTextBody">dacanay@ualberta [dot] ca</p>
+                        <p class = "boxTextBody">You can also find me on Github, at:</p>
+                        <p class = "boxTextBody">https://github.com/DBDacanay</p>
+                    </div>
+                </div>
+        </div>
+        <div class = sideButtons style = "display:none">
+            <button class = "boxNavButtons" onclick = "changeBox('whoAmI')">who am i?</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whatAmI')">what am i?</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whyAmI')">why am i?</button>
+            <button class = "boxNavButtons" onclick = "changeBox('whereAmI')">where am i?</button>
+        </div>
+    </div>
+    <img class = "boxImage" src = "email_graphic.webp">
+    <div class = "footerText">© danielle dacanay 2025 <3</div>
+
+  </body>
+</html>

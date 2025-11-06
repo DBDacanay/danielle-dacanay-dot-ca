@@ -1,0 +1,320 @@
+body {
+    background: rgba(28, 114, 147, 0.3);
+}
+.header {
+    width: 500px;
+    height: 60px;
+    border: 4px solid rgba(158, 179, 194);
+    background: rgba(218, 233, 220, 0.6);
+    border-radius: 12px;
+    padding: 10px;
+    margin: 40px;
+  }
+
+  .headerButtons {
+    width: 80px;
+    height: 60px;
+    border-radius: 12px;
+    border-color: rgba(33, 104, 105);
+    cursor:pointer;
+    color: white;
+    font-weight: bolder;
+    opacity: 0.7;
+    font-size: 14px;
+    transition: 0.25s;
+  }  
+
+  .headerButtons:hover {
+    border-color: rgba(33, 104, 105);
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.05)
+  }  
+
+.box {
+    width: 880px;
+    height: 540px;
+    border: 4px solid rgba(39, 125, 161);
+    border-radius: 12px;
+    border-top: 16px solid rgba(39, 125, 161);
+    padding: 10px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-440px;/* half width*/
+    margin-top:-245px;/* half height*/
+    display: flex;
+    background:rgba(238, 242, 239, 0.9);
+  }
+
+  .boxImage{
+     width:190px;
+     height:190px;
+     border-radius:12px;
+     transform: scale(0.98);
+     transition: 0.25s;
+
+  }
+
+  #boxImage1{
+    position: absolute;
+    right: 0;
+  }
+
+  #irlPhotos{
+    width:260px;
+    height:260px;  
+}
+
+  .boxImage:hover{
+    transform: scale(1);
+  }
+
+  .boxText {
+    width: 80%;
+    overflow: scroll;
+    scrollbar-width: none; 
+  }
+
+  .boxHeader {
+    font-size:26px;
+  }
+
+  .boxTextBody {
+    font-size:18.5px;
+  }
+
+  .boxTextItem{
+    position:relative;
+  }
+
+  .faqButton {
+    width:90%;
+    border-radius: 12px;
+    text-align:left;
+    padding-left: 20px;
+    display:flex;
+    background: rgba(67, 170, 139, 0.3);
+    border-color: rgba(67, 170, 139);
+    margin-bottom: 15px;
+    position:relative;
+  }
+
+  .faqButton:hover{
+    background: rgba(67, 170, 139, 0.6);
+    cursor: pointer;
+  }
+
+.faqAnswers {
+  width: 80%;
+  margin-left:5%;
+
+}
+
+  .dotUnderlineText {
+    cursor: "help";
+    text-decoration:underline;
+    text-decoration-style: dotted;
+  }
+
+  .sideButtons {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;    
+    margin: auto 2% auto auto;
+    cursor:pointer;
+  }
+
+  .boxNavButtons {
+    width: 120px;
+    height: 120px;
+    opacity:0.7;
+    cursor:pointer;
+    color:white;
+    font-weight:bolder;
+    font-size: 16px;
+    transition: 0.25s;
+    scroll-behavior: smooth;
+  }
+
+  .boxNavButtons:hover{
+    opacity:1;
+    transform: scale(1.05);
+  }
+
+  .quoteBox {
+    border-radius: 12px;
+    border:5px solid rgb(145, 161, 128);
+    max-height: 160px;
+    width: 680px;
+    text-align: center;
+    background:  rgba(217, 220, 214);
+    padding-top: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #333333;
+    position: relative;
+  }
+
+  #quoteBox {
+    width: 660px;
+    max-height: 120px;
+  }
+  
+  .refreshButton{
+    border-radius: 4px;
+    height: 10px;
+    width: 10px;
+  }
+  #refreshIcon{
+    border-radius: 12px;
+    height: 10px;
+    width: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    opacity: 80%;
+  }
+  #refreshIcon:hover{
+    opacity:100%;
+    cursor: pointer;
+    transform: scale(1.02)
+  }
+
+
+  .footer {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 25%;
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin: 40px;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.25s;
+  }
+
+  .footer:hover {
+    transform: scale(1.05)
+  }
+
+  .footerText {
+    position: absolute;
+    width: 99%;
+    bottom: 15px;
+    text-align: center;
+    color:white;
+    font-family: 'Lato', sans-serif;
+    opacity: 60%
+  }
+  
+  .solidColour {
+    background:  linear-gradient(rgba(28, 114, 147), rgba(33, 41, 92));
+    color:black;
+    width: 100%;
+    height: 46%;
+    position: fixed;
+    bottom: 0;
+  }
+
+/* WAVES*/
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin:0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight:300;
+  letter-spacing: 2px;
+  font-size:48px;
+}
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.waveBox {
+  position:relative;
+  margin-top:20%;
+  text-align:center;
+  color:blue;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:20px;
+  max-height:40px;
+}
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: black;
+}
+
+/* Animation */
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
