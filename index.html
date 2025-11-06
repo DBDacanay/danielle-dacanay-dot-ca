@@ -13,12 +13,19 @@
   <body>
     <script src="index.js"></script>
     <div class = "header">
-        <button class = "headerButtons" id = "aboutButton" onclick = "changePage('about'), buttonPressed('aboutButton')" style = "background: rgb(39, 125, 161)">about</button>
-        <button class = "headerButtons" id = "researchButton" onclick = "changePage('research'), buttonPressed('researchButton')" style = "background: rgba(87, 117, 144)">research</button>
-        <button class = "headerButtons" id = "cvButton" onclick = "changePage('cv'), buttonPressed('cvButton')" style = "background: rgba(77, 144, 142)">cv</button>
-        <button class = "headerButtons" id = "faqButton" onclick = "changePage('faq'), buttonPressed('faqButton')"  style = "background: rgba(67, 170, 139)">faq</button>
-        <button class = "headerButtons" id = "miscButton" onclick = "changePage('misc'), buttonPressed('miscButton')" style = "background: rgba(144, 190, 109)">misc</button>
-        <button class = "headerButtons" id = "contactButton" onclick = "changePage('contact'), buttonPressed('contactButton')" style = "background: rgb(151, 171, 136)">contact</button>
+        <button class = "headerButtons" id = "aboutButton" onclick = "changePage('about'), buttonPressed('aboutButton')" onmouseover="playNote('note1')" style = "background: rgb(39, 125, 161)">about</button>
+        <button class = "headerButtons" id = "researchButton" onclick = "changePage('research'), buttonPressed('researchButton')" onmouseover="playNote('note2')" style = "background: rgba(87, 117, 144)">research</button>
+        <button class = "headerButtons" id = "cvButton" onclick = "changePage('cv'), buttonPressed('cvButton')" onmouseover="playNote('note3')" style = "background: rgba(77, 144, 142)">cv</button>
+        <button class = "headerButtons" id = "faqButton" onclick = "changePage('faq'), buttonPressed('faqButton')"  onmouseover="playNote('note4')" style = "background: rgba(67, 170, 139)">faq</button>
+        <button class = "headerButtons" id = "miscButton" onclick = "changePage('misc'), buttonPressed('miscButton')" onmouseover="playNote('note5')" style = "background: rgba(144, 190, 109)">misc</button>
+        <button class = "headerButtons" id = "contactButton" onclick = "changePage('contact'), buttonPressed('contactButton')" onmouseover="playNote('note6')" style = "background: rgb(151, 171, 136)">contact</button>
+        <audio id="note1" src="note1.wav"></audio>
+        <audio id="note2" src="note2.wav"></audio>
+        <audio id="note3" src="note3.wav"></audio>
+        <audio id="note4" src="note4.wav"></audio>
+        <audio id="note5" src="note5.wav"></audio>
+        <audio id="note6" src="note6.wav"></audio>
+
     </div>
     <div class="waveBox">
 
@@ -70,23 +77,23 @@
                         <p  style = "position:absolute;right:0;top:75%;right:6%"> <span onclick = "changePhoto('left')">left</span> me in real life :3 <span onclick = "changePhoto('right')">right</span></p>
                     </div>                    
                     <p class = "boxHeader">who am i?</p>
-                    <p class = "boxTextBody" style="width:60%">On a professional level, I'm a </p>
-                    <p class = "boxTextBody" style="width:60%">I'm a computational linguist (MSc), specialising in language documentation and revitalisation. Most of my work centres on documenting and creating digital resources for Indigenous languages in northern Canada.</p>
+                    <p class = "boxTextBody" style="width:60%">nobody</p>
+                    <p class = "boxTextBody" style="width:60%">baaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaa aaa aaaaaa aaaaa aaaa aaaaaa aaah</p>
                     <p class = "boxTextBody"></p>
-                    <p class = "boxTextBody" style="width:60%">You can click on the buttons on the side of this box to learn more about me. You can also click on the boxes on the top right of the screen to see my research, projects, curriculum vitae, and more. </p>
-                    <p class = "boxTextBody">I hope you enjoy your time here in my digital garden, and always remember: </p>
+                    <p class = "boxTextBody" style="width:60%">baaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <p class = "boxTextBody">baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
                 </div>
 
                 <div style= "display:flex;margin-bottom:-15px">
-                    <div style = "margin-left:15px;margin-bottom:0px">
+                    <div style = "">
                         <p class = "boxHeader" id = "whatAmI">what am i?</p>
-                        <p class = "boxTextBody">I'm Danielle Dacanay. </p>
-                        <p class = "boxTextBody">I'm a computational linguist! My job focuses on </p>
+                        <p class = "boxTextBody">smth, prbbly</p>
+                        <p class = "boxTextBody"></p>
                     </div>
                 </div>
                 <div  class = "boxTextItem" style = "display:block" id = "whyAmI">
-                    <p class = "boxHeader">I think</p>
-                    <p class = "boxTextBody"></p>
+                    <p class = "boxHeader">why am i?</p>
+                    <p class = "boxTextBody">Good question.</p>
                     <p class = "boxTextBody"></p>
 
                 </div>

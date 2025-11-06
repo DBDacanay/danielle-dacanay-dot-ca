@@ -204,3 +204,9 @@ function showFAQ(faqnumber, faqArrow){
     }
 
   }
+
+function playNote(audioName) {
+    document.getElementById(audioName).currentTime = 0;
+    document.getElementById(audioName).volume = 0.3;
+    document.getElementById(audioName).play()
+}
