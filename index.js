@@ -161,7 +161,129 @@ function getRandomQuote() {
     document.getElementById('quoteBox').innerHTML =  `"${randomQuote.quote}"<br> - <i>${randomQuote.source}</i>`
 }
 window.onload = function() {
+  };
+
+  var facts = [
+    {
+        fact: "I used to play trombone for a brass band. I was okay :p"
+    },
+    {
+        fact: "I've never broken a bone, although I have bled internally."
+    },
+    {
+        fact: "I am ambidextrous! Most tools and furniture are designed for righthanded people, though, so I typically use my right."
+    },
+    {
+        fact: "I don't really have a favourite colour, but if I did, it would definitely be a greenish blue. Like a kelp forest, or submerged jade."
+    },
+    {
+        fact: "I have written a significant portion of the total English language Wikipedia articles for mid-20th century Chinese mass songs."
+    },
+    {
+        fact: "I am 186cm tall (6'1, for Americans). In heels, that's about 193cm (6'4). The weather's fine up here, by the way."
+    },
+    {
+        fact: "When I got my wisdom teeth removed, I apparently sang the South African national anthem nonstop during the (quite long) car journey home. I have no memory of it."
+    },
+    {
+        fact: "I have terrible, terrible eyesight. The glasses are not decoration."
+    },
+    {
+        fact: "I have 221 hours in the Valve Hammer Editor, a software for creating maps in the Source Engine, virtually all of which were spent creating single map based on a rural Italian monastery. It got 12 downloads"
+    },
+    {
+        fact: "I really like high quality, artisinally-made pencils. I carry at least two with me at all times."
+    },
+    {
+        fact: "My earliest (datable) memory is the death of Steve Irwin (may he rest in peace) in September 2006."
+    },
+    {
+        fact: "My blood type is A+, although as far as I'm aware, I've never had a transfusion."
+    },
+    {
+        fact: "I have no idea what my last name means. I'm fairly confident it's from the Ilokano language in the northern Philippines, but I have never been able to find a translation for it."
+    },
+    {
+        fact: "When I was a kid, I wanted to be a museum curator."
+    },
+    {
+        fact: "I have had a roommate with the same name as me on three separate occasions."
+    },
+    {
+        fact: "I am fascinated by emoji on a conceptual level, as a linguistic phenomenon; however, I almost never actually use them in text. I am much more of an emoticon gal >:3"
+    },
+    {
+        fact: "I like running, cycling, and other endurance exercise, as long as I get to do it alone."
+    },
+    {
+        fact: "I spend a lot of my spare time painting, mostly in a combination of ink, wax pastel, and watercolour. I like depicting mundane scenes from my daily life."
+    },
+    {
+        fact: "I drink between three and four litres of water every day, and virtually nothing else."
+    },
+    {
+        fact: "I love acidic foods, like pickled vegetables, and will gladly eat a full jar of kimchi or morkovcha in a single sitting."
+    },
+    {
+        fact: "One of my first jobs consisted almost entirely of washing and peeling potatoes. I miss that job..."
+    },
+    {
+        fact: "I don't really *collect* anything, although if I see an interesting-looking dictionary, I will usually buy it."
+    },
+    {
+        fact: "My favourite type of cheese is smoked sulguni or chechil, although a good smoked gouda is a close second."
+    },
+    {
+        fact: "I usually churn my own butter, rather than buying it; it's delicious, and provides an excellent opportunity for exercise and pondering."
+    },
+    {
+        fact: "The coldest temperature I have ever experienced in nature was -45C; the warmest was about 40C."
+    },
+    {
+        fact: "I once got frostbite on my left hand while waiting to be let into a building in Alberta. I didn't realise it was frostbite until I later searched 'frostbite symptoms' on Google."
+    },
+    {
+        fact: "I am not a picky eater at <i>all</i>; however, I absolutely cannot stand ranch dressing or cold processed meats."
+    },
+    {
+        fact: "The longest time I have gone without eating was about 52 hours. The longest I have gone without water is about 30 hours."
+    },
+    {
+        fact: "I remember most of my dreams, probably about 60-70% of them. However, if I don't write them down, I will forget them again within a few days."
+    },
+    {
+        fact: "When I was a teenager, I made three of most upvoted posts of all time in r/vexillology. All three are still in the top one hundred, and I still occasionally get comments on them to this day."
+    },
+    {
+        fact: "I used to have a vlog channel on Youtube. It was terrible. I'm not sending you the link."
+    },
+    {
+        fact: "I can play the concertina! Poorly!"
+    },
+    {
+        fact: "I have three separate journals on different aspects of my life that I update on a daily basis; it is not uncommon for me to spend two to three hours daily journalling."
+    },
+    {
+        fact: "I don't like the feeling of velvet."
+    },
+    {
+        fact: "I fidget with things constantly while I work, usually jewelry, hair-ties, or writing utensils. It helps me focus."
+    },
+    {
+        fact: "I am very easily startled by sudden noises."
+    },
+    {
+        fact: "Some people love me."
+    },
+  ];
+
+  function getRandomFact() {
+    var randomFact = facts[Math.floor(Math.random() * facts.length)]
+    document.getElementById('factBox').innerHTML =  `${randomFact.fact}`
+}
+window.onload = function() {
     getRandomQuote()
+    getRandomFact()
   };
 
 function showFAQ(faqnumber, faqArrow){

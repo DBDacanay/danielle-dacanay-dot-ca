@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>danielle's garden</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=refresh" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
   <body>
     <script src="index.js"></script>
@@ -74,26 +72,33 @@
                 <div  class = "boxTextItem" style = "display:block;position:relative" id = "whoAmI">
                     <div style = "display:flex;flex-direction:row">
                         <img class = "boxImage" id = "irlPhotos" src = "avatar.webp" style = "position:absolute;right:0;top:10%">
-                        <p  style = "position:absolute;right:0;top:75%;right:6%"> <span onclick = "changePhoto('left')">left</span> me in real life :3 <span onclick = "changePhoto('right')">right</span></p>
+                        <p  style = "position:absolute;right:5%;top:60%"> <span onclick = "changePhoto('left')" class="material-symbols-outlined">chevron_left</span> me in real life :3 <span onclick = "changePhoto('right')" class="material-symbols-outlined">chevron_right</span></p>
                     </div>                    
                     <p class = "boxHeader">who am i?</p>
-                    <p class = "boxTextBody" style="width:60%">nobody</p>
-                    <p class = "boxTextBody" style="width:60%">baaaaaaaa aaaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaaa aaaaa aaa aaaaaa aaaaa aaaa aaaaaa aaah</p>
+                    <p class = "boxTextBody" style="width:60%">My name is Danielle Elana Benedicta Dacanay (rhymes with 'smack a guy'). I like learning things! ^w^</p>
+                    <p class = "boxTextBody" style="width:60%">I find it really hard to write about myself outside of a professional capacity, so I've put together a list of personal facts which you can click through in the box below.</p>
                     <p class = "boxTextBody"></p>
-                    <p class = "boxTextBody" style="width:60%">baaaaaaaaaa aaaaaaaaaaaaaaaaaaaa aaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                    <p class = "boxTextBody">baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <div class="quoteBox" style = "width:60%">Random Fact Generator
+                        <p class = "boxTextBody" id = "factBox">[INSERT QUOTE]</p>
+                        <span class="material-symbols-outlined" id = "refreshIcon" onclick = "getRandomFact()">
+                            refresh
+                            </span>
+                    </div>
                 </div>
 
                 <div style= "display:flex;margin-bottom:-15px">
                     <div>
                         <p class = "boxHeader" id = "whatAmI">what am i?</p>
-                        <p class = "boxTextBody">smth, prbbly</p>
-                        <p class = "boxTextBody"></p>
+                        <p class = "boxTextBody">I am a computational linguist and lexicographer, specialising in creating digital resources such as dictionaries, corpora, and grammatical models for under-documented, endangered, and under-resourced languages.</p> 
+                        <p class = "boxTextBody">More generally, I am also a documentary linguist, collecting and analysing language data from fluent speakers in order to formulate a more complete understanding of how the grammars of their languages operate.</p>
+                        <p class = "boxTextBody">My work has been primarily concerned with languages in the Dene and Algonquian families (mostly Plains Cree and Tłı̨chǫ yatıı̀), but I have collaborated in projects with languages from across the globe. You can see a map of my research here.</p>
+                        <p class = "boxTextBody">I mostly work in the documentation of morphology and the lexicon, but I also have research interests in semantics, syntax, linguistic typology, and historical reconstruction.</p>
+                        <p class = "boxTextBody">You can read more about my work by clicking here. You can also read a more specialised description of my research interests here.</p>
                     </div>
                 </div>
                 <div  class = "boxTextItem" style = "display:block" id = "whyAmI">
                     <p class = "boxHeader">why am i?</p>
-                    <p class = "boxTextBody">Good question.</p>
+                    <p class = "boxTextBody">Providing comprehensive and accessible documentation for low-resource and endangered languages is a passion of mine at both a personal and professional level, and it is my profound honour to participate in the task of preserving, proliferating, and empowering the continued use of those unparalleled gemstones of human ingenuity and wisdom that are the many languages of our Earth.</p>
                     <p class = "boxTextBody"></p>
 
                 </div>
@@ -119,38 +124,92 @@
             <div class = "boxTextItem" id = "headerIntroResearch">
                 <p class = "boxHeader">research</p>
                 <p class = "boxTextBody">This is the section about my research</p>
+                <div style = "display:grid;grid-template-columns: auto auto auto">
+                    <button class = "researchTile">1</button>
+                    <button class = "researchTile">2</button>
+                    <button class = "researchTile">3</button>
+                    <button class = "researchTile">4</button>
+                    <button class = "researchTile">5</button>
+                    <button class = "researchTile">6</button>
+
+                </div>
             </div>
-            <div  class = "boxTextItem" style = "display:none" id = "majorProjects">
+            <div  class = "boxTextItem"  id = "majorProjects">
+                <div style = "display:grid">
+                    <button class = "researchTile" onclick = "showFAQ('TOD', 'aaa')">
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">Tłı̨chǫ Online Dictionary</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">An intelligent online dictionary of Tłı̨chǫ yatıı̀.</p>  
+                    </button>
+                    <p class = "boxTextBody" id = "TOD" style = "margin-bottom:0px; margin-left:20%;display:none">aaaaa</p>  
+                    <button class = "researchTile" >
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">itwêwina</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">An intelligent online dictionary of Plains Cree.</p>  
+                    </button> 
+                    <button class = "researchTile" >
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">Speech Database (Speech-DB)</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">An online language documentation database for audio.</p>  
+                    </button> 
+                    <button class = "researchTile" >
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">Plains Cree Supplemental Corpus</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">A corpus of Plains Cree texts with parallel English translations.</p>  
+                    </button>                     
+                    <button class = "researchTile" >
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">Dictionnaire de la langue des Cris (1874)</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">An English translation of a 19th century French dictionary of Plains Cree.</p>  
+                    </button>         
+                    <button class = "researchTile" >
+                        <img src = "avatar.webp" style = "width:120px;height:120px;float:left"></img>
+                        <p class = "boxHeader" style = "margin-bottom:0px; margin-left:20%">ʔayʔaǰuθəm Morphological Parser</p>
+                        <p class = "boxTextBody" style = "margin-bottom:0px; margin-left:20%">A finite-state based morphological model of ʔayʔaǰuθəm (Comox-Sliammon).</p>  
+                    </button> 
+                    <p class = "boxHeader" id = 'publications'>publications</p>
+                    <p class = "boxTextBody">Dacanay, D., Harrigan, A., & Arppe, A. (2021). Computational analysis versus human intuition: a critical comparison of vector semantics with manual semantic classification in the context of Plains Cree. In Silfverberg, M., & Desjardins, J.  (eds.), Proceedings of the 4th Workshop on Computational Methods for Endangered Languages, 1, 33-43. doi:10.33011/computel.v1i.971</p>
+                    <p class = "boxTextBody">Dacanay, D., Harrigan, A., Wolvengrey, A. & Arppe, A. (2021). The more detail, the better? – Investigating the effects of semantic ontology specificity on vector semantic classification with a Plains Cree / nêhiyawêwin dictionary. In Mager, M., Oncevay, A., Rios, A., Meza Ruiz, I.V., Palmer, A., Neubig, G., Kann, K.  (eds.), Proceedings of the 1st Workshop on NLP for Indigenous Languages of the Americas, 1, 143-52. doi:10.18653/v1/2021.americasnlp-1.15</p>
+                    <p class = "boxTextBody">Dacanay, D., Poulin, J., & Arppe, A. (2022). kêtiski-kotahâskwâtam: The effectiveness of various hypernymic levels of WordNet synsets as vector semantic classification categories. In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Third Algonquian Conference (PAC53), 53.                 </p>
+                    <p class = "boxTextBody">Dacanay, D. (2022). Lexical Semantic Classification in Plains Cree (nêhiyawêwin): Manual and Computational Approaches (Honours thesis, University of Alberta).</p>
+                    <p class = "boxTextBody">Poulin, J., Dacanay, D., & Arppe, A. (2023). Speech Database (Speech-DB) – An on-line platform for recording, storing, validating, and searching spoken language data. In the Proceedings of 1st Workshop on NLP applications to Field Linguistics (Field Matters). </p>
+                    <p class = "boxTextBody">Arppe, A., Neitsch, A., Dacanay, D., Poulin, J., Hieber, D., & Harrigan, A. (2023) Finding words that aren’t there: Using word embeddings to improve dictionary search for low-resource languages. In Proceedings of the 3rd Workshop on NLP for Indigenous Languages of the Americas.</p>
+                    <p class = "boxTextBody">Arppe, A., Harrigan, A., Schmirler, K., Dacanay, D., Makinaw, R. (2023) nêhiyawi-pîkiskwêwin maskwacîsihk: Spoken Dictionary of Maskwacîs Cree. Dictionaries: Journal of the Dictionary Society of North America, 44(2), 127-42</p>
+                    <p class = "boxTextBody">Dacanay, D. (2024). Woods Cree (nîhithawîwin): A Grammatical Description and Computational Modelling (Master's Thesis, University of Alberta). </p>
+                    <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2025). Digitizing, translating, and standardizing Pr. Albert Lacombe’s Dictionnaire de la langue des Cris (1874). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Fourth Algonquian Conference (PAC54), 54.</p>
+                    <p class = "boxTextBody">Dacanay, D., & Arppe, A. (2026, forthcoming). misi-mîkiwâhp pêsêkinosa ohci – A corpus of miscellaneous Plains Cree texts. In Papers of the Fifty-Fifth Algonquian Conference (PAC55), 55.</p>
+                    <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2027, forthcoming). Adapting a Plains Cree (nêhiyawêwin) morphological model to Woods Cree (nîhithawîwin). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Sixth Algonquian Conference (PAC56), 56.</p>
+                    <p class = "boxHeader"></p>
+
+                </div>
+
                 <p class = "boxHeader">Tłı̨chǫ Online Dictionary</p>
-                <p class = "boxTextBody">As its name suggests, the Tłı̨chǫ Online Dictionary is an intelligent online dictionary of Tłı̨chǫ, containing over 11500 entries from dozens of sources, spanning from the late 1960s to 2025. It is searchable in English and Tłı̨chǫ, and is able to recognise Tłı̨chǫ search queries even if their spelling differs from that of the standard orthography. The dictionary also features the ability to search for entries by semantic domains, using a semantic classification system based on the SIL Rapid Word Collection Methodology. Inflectional paradigms are automatically generated for verbs, nouns, and adpositions . The dictionary also contains over 3000 audio recordings, over 4000 example sentences, and supports the ability to add cultural notes to individual entries to clarify usage. The site also allows users to submit their own entries for consideration, as well as to suggest alterations to existing entries.</p>
-                <p class = "boxTextBody">I created the Tłı̨chǫ Online Dictionary largely as an upgrade to an existing Tłı̨chǫ dictionary site created by the University of Victoria in 2004. Through collaboration with the Tłı̨chǫ Government’s Department of Culture and Lands Protection, I have led the creation of the online dictionary both from a linguistic perspective (that is, eliciting new entries, creating paradigms, and consulting with L1 speakers, among other things) and from the perspective of web development (that is, creating and managing the site and user interface). A full list of collaborators may be found here.
-                <p class = "boxTextBody">The Tłı̨chǫ Online Dictionary itself may be found here.</p>
+                <p class = "boxTextBody">As its name suggests, the Tłı̨chǫ Online Dictionary is an intelligent online dictionary of Tłı̨chǫ, containing over 11500 entries from dozens of sources, spanning from the late 1960s to 2025. It is searchable in English and Tłı̨chǫ, and is able to recognise Tłı̨chǫ search queries even if their spelling differs from that of the standard orthography. The dictionary also features the ability to search for entries by semantic domains, using a semantic classification system based on the <a href = "https://semdom.org/">SIL Rapid Word Collection Methodology</a>. Inflectional paradigms are automatically generated for verbs, nouns, and adpositions . The dictionary also contains over 3000 audio recordings, over 4000 example sentences, and supports the ability to add cultural notes to individual entries to clarify usage. The site also allows users to submit their own entries for consideration, as well as to suggest alterations to existing entries.</p>
+                <p class = "boxTextBody">I created the Tłı̨chǫ Online Dictionary largely as an upgrade to an existing Tłı̨chǫ dictionary site created by the University of Victoria in 2004. Through collaboration with the Tłı̨chǫ Government’s <a href = "https://www.tlicho.ca/government/culture-lands-protection">Department of Culture and Lands Protection</a>, I have led the creation of the online dictionary both from a linguistic perspective (that is, eliciting new entries, creating paradigms, and consulting with L1 speakers, among other things) and from the perspective of web development (that is, creating and managing the site and user interface).
+                <p class = "boxTextBody">The Tłı̨chǫ Online Dictionary itself may be found <a href = "https://tlichodictionary.ca/">here</a>.</p>
                 <p class = "boxHeader">itwêwina</p>
                 <p class = "boxTextBody">itwêwina is an intelligent online dictionary of Plains Cree developed by the Alberta Language Technology Lab (ALTLab), searchable both in Plains Cree and English. Its contains the combined contents of three separate, pre-existing Plains Cree dictionaries with a morphological model which is able to automatically generate conjugated forms for each noun and verb entry, as well as recognise any conjugated forms as search queries. In addition to this, itwêwina‘s search functionality is able to return semantically related terms for any search query, even if the search query is not an entry in the dictionary, and can even translate certain short English sentences into conjugated Cree words. Furthermore, audio recordings of pronunciations from multiple native speakers are available for thousands of itwêwina‘s entries, and it is possible to enable a Cree text-to-speech model to generate theoretical pronunciations for any entries which lack native speaker recordings. Finally, itwêwina‘s search functionality is able to recognise systemic variations in the spelling of Cree words, as well as Cree syllabics, allowing users to effectively search for words even if they are unsure of their exact spelling.</p>
                 <p class = "boxTextBody">Although initially created for Plains Cree, the basic framework for itwêwina has been designed to be easily adaptable for use in other languages, and versions of itwêwina have been created for Woods Cree (nīhithawīwin), Sarcee (Tsúùtʼínà), Northern Haida (X̱aat Kíl), and Arapaho (Hinóno’éitíit)</p>
                 <p class = "boxTextBody">My primary contributions to itwêwina include manually annotating large quantities of Plains Cree audio to extract vocabulary recordings and link them to their respective entries, performing preliminary research and heuristic tests for the semantic search system, adding and standardising the contents of two of itwêwina‘s three constituent dictionaries, and collecting and processing natural language data for the search spellchecker.</p>
-                <p class = "boxTextBody">itwêwina may be found here.</p>
+                <p class = "boxTextBody">itwêwina may be found <a href = "https://itwewina.altlab.app/">here</a>.</p>
                 <p class = "boxHeader">Maskwacîs Speech Database</p>
-                <p class = "boxTextBody">The Maskwacîs Speech Database is a freely accessible online database of spoken Plains Cree words and sentences, developed by the Alberta Language Technology Lab and chiefly coded by Jolene Poulin. It contains 20 300 entries and over 150 000 individual recordings, the vast majority of which were elicited from native Cree speakers in Maskwacîs, Alberta over the course of a four year period from 2014 to 2018. In addition to these entries, Maskwacîs Speech Database also has a built-in audio recording system, allowing registered users to record their own pronunciations of words and sentences, which may be added to the main database once they are reviewed and approved by a linguist. Although the Speech Database was initially developed for the Maskwacîs dialect of Plains Cree, the Speech Database format has since been expanded to be used with multiple other languages, including other dialects of Plains Cree, Sarcee (Tsúùtʼínà), and Stoney-Nakoda (Îethka Îabi).</p>
+                <p class = "boxTextBody">The Maskwacîs Speech Database is a freely accessible online database of spoken Plains Cree words and sentences, developed by the Alberta Language Technology Lab and chiefly coded by <a href = "https://nienna73.github.io/">Jolene Poulin</a>. It contains 20 300 entries and over 150 000 individual recordings, the vast majority of which were elicited from native Cree speakers in Maskwacîs, Alberta over the course of a four year period from 2014 to 2018. In addition to these entries, Maskwacîs Speech Database also has a built-in audio recording system, allowing registered users to record their own pronunciations of words and sentences, which may be added to the main database once they are reviewed and approved by a linguist. Although the Speech Database was initially developed for the Maskwacîs dialect of Plains Cree, the Speech Database format has since been expanded to be used with multiple other languages, including other dialects of Plains Cree, Sarcee (Tsúùtʼínà), and Stoney-Nakoda (Îethka Îabi).</p>
                 <p class = "boxTextBody">My primary contributions to the Maskwacîs Speech Database have been annotating the source audio files to extract recordings of relevant words and phrases, standardising the Cree spelling and English definitions for each entry, providing morphological analyses for each entry, and reviewing each entry in the database with native speakers of Cree to ensure that the pronunciations and definitions are correct</p>
-                <p class = "boxTextBody">The Maskwacîs Speech Database may be found here.</p>
+                <p class = "boxTextBody">The Maskwacîs Speech Database may be found <a href = "https://speech-db.altlab.app/maskwacis/entries">here</a>.</p>
             </div>
-            <div  class = "boxTextItem" style = "display:none" id = "two">
-
-            </div>
-            <div  class = "boxTextItem" style = "display:none" id = "minorProjects">
+            <div  class = "boxTextItem" id = "minorProjects">
                 <p class = "boxHeader">Plains Cree Supplemental Corpus</p>
                 <p class = "boxTextBody">The Plains Cree Supplemental Corpus is a digital corpus of miscellaneous written Plains Cree texts, chiefly Plains Cree translations of governmental and corporate documents, as well as a large number of stories, songs, and interviews from native speakers. Each of the 457 individual texts in the corpus has been segmented into sentences, with each Cree sentence manually paired with an English translation. The corpus has a total of size of ~349 000 tokens, with roughly half of these being Cree, and the other half being English translations. In terms of raw token count, this represents the largest searchable corpus of Plains Cree compiled to date. The materials used to create this corpus were taken from various, disparate sources across the internet (including the Cree Literacy Network), with the compilation of this corpus representing the first major centralisation of this ephemera into a single, searchable repository. The metadata for each individual source, which includes speaker age, region of origin, genre, and level of adherence to the Plains Cree Standard Roman Orthography, is catalogued in a spreadsheet alongside the main corpus materials.</p>
                 <p class = "boxTextBody">I have headed this project since its inception, and have been responsible for locating and cataloguing each of the texts in the corpus, pairing (or parallelising) each Cree sentence with its English equivalent, and for maintaining an organised central repository of the texts.</p>
                 <p class = "boxTextBody">I am currently in the process of making an accessible online repository; however, if you would like to access the corpus in the meantime, feel free to email me.</p>
                 <p class = "boxHeader">Translation of the Dictionnaire de la langue des Cris (1874)</p>
                 <p class = "boxTextBody">The Dictionnaire de la langue des Cris is French dictionary of Plains Cree written by Pr. Albert Lacombe in 1874, constituting the earliest, and to this day one of the largest, written dictionaries of the language. However, use of the dictionary among modern Plains Cree populations is relatively minimal, owing largely to the fact that it was written in French, a language which is contemporaneously spoken by only a small portion of the population of the Western Prairies. As such, I translated all 11 411 entries in the dictionary into English, transcribing each into a searchable digital text format. This translation of the dictionary was made available online as a companion dictionary to itwêwina, although it is eventually planned for the contents of the two to be merged. In addition to this translation, I am also in the process of standardising the Cree spelling and part-of-speech classification system used in the original dictionary to correspond to modern lexicographic standards; as of writing, I have standardised ~61% of the dictionary’s contents.</p>
-                <p class = "boxTextBody">The searchable, non-standardised English translation of the Dictionnaire de la langue des Cris may be found here. If you would like the (unfinished) standardised version, feel free to email me.</p>
+                <p class = "boxTextBody">The searchable, non-standardised English translation of the Dictionnaire de la langue des Cris may be found <a href = "https://lacombe.altlab.dev/">here</a>. If you would like the (unfinished) standardised version, feel free to email me.</p>
                 <p class = "boxHeader">ʔayʔaǰuθəm Morphological Parser</p>
                 <p class = "boxTextBody">The Comox (ʔayʔaǰuθəm) Morphological Parser is a script which I have written to automatically provide inflectional and derivational analyses for morphologically complex words in ʔayʔaǰuθəm. The linguistic basis for the script largely stems from the descriptive works of Dr. Honoré Watanabe (particularly his 2003 morphological description), as well as my personal consultations with Dr. Marianne Huijsmans. Although still firmly in beta development, tests of the current model are able to provide morphological analyses for ~52% of tokens in previously unseen texts.</p>
                 <p class = "boxTextBody">The ʔayʔaǰuθəm parser is not yet publicly available, however, if you would like more information, feel free to email me.</p>
             </div>
-            <div  class = "boxTextItem" style = "display:none" id = "publications">
+            <div  class = "boxTextItem">
                 <p class = "boxHeader">publications</p>
                 <p class = "boxTextBody">Dacanay, D., Harrigan, A., & Arppe, A. (2021). Computational analysis versus human intuition: a critical comparison of vector semantics with manual semantic classification in the context of Plains Cree. In Silfverberg, M., & Desjardins, J.  (eds.), Proceedings of the 4th Workshop on Computational Methods for Endangered Languages, 1, 33-43. doi:10.33011/computel.v1i.971</p>
                 <p class = "boxTextBody">Dacanay, D., Harrigan, A., Wolvengrey, A. & Arppe, A. (2021). The more detail, the better? – Investigating the effects of semantic ontology specificity on vector semantic classification with a Plains Cree / nêhiyawêwin dictionary. In Mager, M., Oncevay, A., Rios, A., Meza Ruiz, I.V., Palmer, A., Neubig, G., Kann, K.  (eds.), Proceedings of the 1st Workshop on NLP for Indigenous Languages of the Americas, 1, 143-52. doi:10.18653/v1/2021.americasnlp-1.15</p>
@@ -164,17 +223,15 @@
                 <p class = "boxTextBody">Dacanay, D., & Arppe, A. (2026, forthcoming). misi-mîkiwâhp pêsêkinosa ohci – A corpus of miscellaneous Plains Cree texts. In Papers of the Fifty-Fifth Algonquian Conference (PAC55), 55.</p>
                 <p class = "boxTextBody">Dacanay, D. & Arppe, A. (2027, forthcoming). Adapting a Plains Cree (nêhiyawêwin) morphological model to Woods Cree (nîhithawîwin). In McCaulay, M. & Noodin, M. (eds.), Papers of the Fifty-Sixth Algonquian Conference (PAC56), 56.</p>
                 <p class = "boxHeader"></p>
-            </div>
-            <div  class = "boxTextItem" style = "display:none" id = "other">
-                <p class = "boxHeader">other</p>
+                <p class = "boxHeader" id = "other">other</p>
                 <p class = "boxTextBody">laterrrrr</p>
             </div>
         </div>
         <div class = sideButtons>
-            <button class = "boxNavButtons" onclick = "changeBox('majorProjects')" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">major projects</button>
-            <button class = "boxNavButtons" onclick = "changeBox('minorProjects')" style = "background: rgb(77, 144, 142)">minor projects</button>
-            <button class = "boxNavButtons" onclick = "changeBox('publications')" style = "background: rgb(67, 170, 139)">publications</button>
-            <button class = "boxNavButtons" onclick = "changeBox('other')" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">other</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('majorProjects').scrollIntoView({behavior: 'smooth', block:'start'})" style = "background: rgb(39, 125, 161);border-radius:12px 12px 0% 0%">major projects</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('minorProjects').scrollIntoView({behavior: 'smooth', block:'start'})" style = "background: rgb(77, 144, 142)">minor projects</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('publications').scrollIntoView({behavior: 'smooth', block:'start'})" style = "background: rgb(67, 170, 139)">publications</button>
+            <button class = "boxNavButtons" onclick = "document.getElementById('other').scrollIntoView({behavior: 'smooth', block:'start'})" style = "background: rgb(144, 190, 109);border-radius:0% 0% 12px 12px">other</button>
         </div>
     </div>
     <div class = "box" id = "cv" style = "display:none;border:4px solid rgba(77, 144, 142);border-top: 16px solid rgba(77, 144, 142)">
